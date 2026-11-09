@@ -1,0 +1,34 @@
+name: Challange1
+on: workflow_dispatch          # run manually from the Actions tab
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup
+        run: |
+          date                 # print the date
+          pwd                  # print the working directory
+          ls -la               # print the contents of the directory
+
+  job2:
+    name: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: print python version
+        run: python --version
+
+      - name: set up pandas
+        run: pip install pandas
+
+      - name: create artefact
+        run: |
+          echo "# This is my python artifact" > artifact.py
+          cat artifact.py      # show what was written
+          python artifact.py   # run the program
