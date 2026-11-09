@@ -1,6 +1,6 @@
 name: MLWorkflow
 
-on: workflow_dispatch          # run manually from the Actions tab
+on: [workflow_dispatch, push]          # run manually from the Actions tab
 
 jobs: 
   job1:

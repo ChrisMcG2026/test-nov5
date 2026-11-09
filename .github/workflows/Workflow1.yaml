@@ -1,5 +1,5 @@
 name: tutorial
-on: push
+on: workflow_dispatch          # run manually from the Actions tab
 
 jobs: 
     job1:
