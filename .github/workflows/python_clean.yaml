@@ -10,5 +10,3 @@ jobs:
       - run: 
            echo ${{github.workspace}}  # print the working directory
            echo $GITHUB_WORKSPACE
-
-
