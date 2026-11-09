@@ -1,0 +1,14 @@
+name: Clean_Data
+
+on: workflow_dispatch          # run manually from the Actions tab
+
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses; actions/checkout@v6
+      - run: 
+           echo ${{github.workspace}}  # print the working directory
+           echo $GITHUB_WORKSPACE
+
+
