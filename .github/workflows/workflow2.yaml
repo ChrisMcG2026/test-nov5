@@ -19,7 +19,7 @@ jobs:
       - name: Clean data
         run: |
           pip3 install pandas joblib scikit-learn
-          python cleanData.py
+          python Cleandata.py
           ls -l
       - name: TrainModel
         run: |
